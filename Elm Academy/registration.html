@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Elm Academy</title>
+        <link rel="stylesheet"  href="website.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body style="background-color: black;">
+        <div id="particles-js">
+        <div class="testclass1">
+        <header class="container group primary-header">
+            <h1 class="logo">
+                <a href="website.html">Elm Academy</a>
+                <i class="fa fa-pagelines" aria-hidden="true"></i>
+            </h1>
+            
+                
+            </a>
+            <a class="btn1 btn-alt1 login" href="signin.html">LOGIN</a>
+            <p class="tagline">Breaking the Barriers to Learning</p>
+                    
+
+            <nav class="primary-nav nav">
+                <a href="website.html">Home</a>
+                <a href="website.html">About</a>
+                <a href="website.html">Teachers</a>
+                <a href="website.html">Courses</a>
+                <a href="registration.html">Register</a>
+            </nav>
+        </header>
+        </div>
+
+        <section class="row2">
+            <div class="grid">
+                <section class="col-2-3">
+                    <h1 class="scroll">Register</h1>
+                    <p>87% of people learning for professional development report<br> career benefits like getting a promotion, a raise, or starting<br> a new career. Join the greatest learning hub to start your<br> own journey to success</p>
+                    
+                    <h3 class="scroll1">Why should you join Elm Academy?</h3>
+
+                    <ul class="merits">
+                        <li>Start streaming on-demand video lectures today from top instructors</li> <br>
+                        <li>Choose from options of free courses and degrees at a breakthrough price </li> <br>
+                        <li>Interactive doubt clearing sessions every week after topic completion</li> <br>
+                        <li>Apply what you learn with self-paced quizzes and hands-on projects.</li> <br>
+                    </ul>
+
+                    <video style="border-radius: 10px;" controls height="400px" width="500px">
+                        <source src="video1.mp4" type="video/mp4">
+                        </video>
+                </section><!--
+
+                --><form  onsubmit="return validation()" class="col-1-3">
+                    <div class="form_group">
+                        <label>
+                            Name 
+                        </label><br><br>
+                            <input type="text" name="" placeholder=" Name" id="username" class="form_control"   style="border-radius: 10px;" required>
+                            <span id="usererror" class="text-danger font-weight bold"></span>
+                    </div><br>
+
+                    <div class="form_group">
+                        <label>
+                            Password
+                        </label><br><br>
+                            <input type="password" name="" placeholder="*********" id="password" class="form_control"  style="border-radius: 10px;" required>
+                            <span id="passworderror" class="text-danger font-weight bold"></span>
+                    </div><br>
+
+                    <div class="form_group">
+                        <label>
+                            Confirm Password
+                        </label><br><br>
+                            <input type="password" name="" placeholder="*********" id="cpassword" class="form_control" style="border-radius: 10px;" required>
+                            <span id="cpassworderror" class="text-danger font-weight bold"></span>
+                    </div><br>  
+                    
+                    <div class="form_group">
+                        <label>
+                            Email Address
+                        </label><br><br>
+                            <input type="email" name="" placeholder="abc@gmail.com" id="email" class="form_control"  style="border-radius: 10px;" required>
+                            <span id="emailerror" class="text-danger font-weight bold"></span>
+                    </div><br>
+
+                    <div class="form_group">
+                        <label>Mobile No.
+                        </label><br><br>
+                        <input type="text" name="" placeholder="1234567890"id="number" class="form_control" style="border-radius: 10px;" required><br>
+                        <span id="numbererror" class="text-danger font-weight bold"></span>
+                    </div><br>
+                            <label>
+                            Subscription duration (months)<br><br>
+                            <select name="quantity" required>
+                                <option value="1" selected>1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </label><br><br>
+                    
+                    <input class="btn btn-pur" type="submit" name="submit" value="SIGN UP">
+
+                </form>
+            </div>
+
+            <script type="text/javascript">
+                function validation(){
+                var username = document.getElementById('username').value;
+                var password = document.getElementById('password').value;
+                var cpassword = document.getElementById('cpassword').value;
+                var email = document.getElementById('email').value;
+                var number = document.getElementById('number').value;
+    
+                var usercheck = /^[A-Za-z. ]{3,30}$/;
+                var passwordcheck = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$/;
+                var emailcheck = /^[A-A-Za-z_]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/;
+                var numbercheck = /^[789][0-9]{9}$/;
+    
+                if (usercheck.test(username)){
+                    document.getElementById('usererror').innerHTML = " ";
+                }
+                else{
+                    document.getElementById('usererror').innerHTML = "** Username is Invalid here";
+                    return false;
+                }
+    
+                if (passwordcheck.test(password)){
+                    document.getElementById('passworderror').innerHTML = " ";
+                }
+                else{
+                    document.getElementById('passworderror').innerHTML = "** Password is Invalid here";
+                    return false;
+                }
+    
+                if (cpassword.match(password)){
+                    document.getElementById('cpassworderror').innerHTML = " ";
+                }
+                else{
+                    document.getElementById('cpassworderror').innerHTML = "** Password does not match";
+                    return false;
+                }
+    
+                if (emailcheck.test(email)){
+                    document.getElementById('emailerror').innerHTML = " ";
+                }
+                else{
+                    document.getElementById('emailerror').innerHTML = "** Email ID is Invalid here";
+                    return false;
+                }
+    
+                if (numbercheck.test(number)){
+                    document.getElementById('numbererror').innerHTML = " ";
+                }
+                else{
+                    document.getElementById('numbererror').innerHTML = "** Number is Invalid here";
+                    return false;
+                }
+    
+                }
+            </script>
+        </section>
+        
+        
+
+        <footer class="primary-footer container">
+            <small class="size">&reg; ELM EDU SERVICES ALL RIGHTS RESERVED</small>
+            
+            <nav class="nav">
+                <p style="font-size: x-small;">CONTACT US<p>
+                <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
+                <a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i>
+                </a>
+                <a href="#"><i class="fa fa-google-plus-official" aria-hidden="true"></i>
+                </a>
+                <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-youtube-square" aria-hidden="true"></i>
+                </a>
+            </nav>
+        </div>
+        </footer>
+
+        <script type="text/javascript" src="particles.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+
+        <script src= "scroll-out.js"></script>
+        <script type= "text/javascript">
+            ScrollOut({
+                targets: '.scroll, .scroll1'
+            });
+        </script>
+        
+
+    </body>
+</html>
